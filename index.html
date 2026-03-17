@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문제정의연구소</title>
+  <meta name="description" content="문제를 정의하는 방법을 연구합니다. 교육, 연구, 훈련.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Pretendard', -apple-system, sans-serif;
+      background: #faf9f7;
+      color: #1a1a1a;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.7;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+    }
+
+    .logo { width: 120px; height: auto; margin-bottom: 2rem; }
+
+    .hero h1 {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero .tagline {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero .activities {
+      color: #999;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      color: #ccc;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    /* ── Sections ── */
+    section {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+
+    section h2 {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      letter-spacing: 0.04em;
+    }
+
+    section p {
+      color: #444;
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      max-width: 640px;
+      margin: 0 auto;
+      border: none;
+      border-top: 1px solid #e8e6e3;
+    }
+
+    /* ── Areas ── */
+    .areas {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+
+    .area-item h3 {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .area-item p {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+
+    /* ── Approach ── */
+    .stages {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.6rem;
+    }
+
+    .stage {
+      padding: 1.2rem 0;
+    }
+
+    .stage .label {
+      font-size: 0.7rem;
+      color: #aaa;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .stage h3 {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .stage p {
+      color: #777;
+      font-size: 0.85rem;
+      margin-bottom: 0;
+    }
+
+    /* ── Writing / Blog ── */
+    .writing-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .writing-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .writing-list .title {
+      color: #333;
+      font-size: 0.9rem;
+    }
+
+    .writing-list .meta {
+      color: #bbb;
+      font-size: 0.75rem;
+      white-space: nowrap;
+      margin-left: 1rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+
+    footer a {
+      color: #888;
+      text-decoration: none;
+      border-bottom: 1px solid #ddd;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    footer a:hover {
+      color: #1a1a1a;
+      border-color: #1a1a1a;
+    }
+
+    footer .links {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 480px) {
+      .logo { width: 90px; }
+      .hero h1 { font-size: 1.4rem; }
+      .stages { grid-template-columns: 1fr; }
+      section { padding: 3.5rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <img src="logo.png" alt="문제정의연구소" class="logo">
+    <h1>문제정의연구소</h1>
+    <p class="tagline">문제를 정의하는 방법을 연구합니다.</p>
+    <p class="activities">교육 · 연구 · 훈련</p>
+  </header>
+
+  <hr class="divider">
+
+  <!-- About -->
+  <section>
+    <h2>소개</h2>
+    <p>해결 방법론은 수백 가지입니다. 디자인씽킹, 린, 애자일, 시스템 사고. 그런데 그 모든 방법론이 공통으로 전제하는 단계가 있습니다.</p>
+    <p>문제정의입니다.</p>
+    <p>문제정의연구소는 이 단계를 독립적인 방법론으로 다룹니다. 문제를 어떻게 정의하느냐에 따라 해결의 방향이 달라지고, 동원할 수 있는 자원이 달라지고, 도달할 수 있는 결과가 달라집니다.</p>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Areas -->
+  <section>
+    <h2>사업 영역</h2>
+    <div class="areas">
+      <div class="area-item">
+        <h3>교육</h3>
+        <p>문제지능(Problem Intelligence)을 훈련하는 워크숍과 강의를 운영합니다. 문제를 보는 눈, 구분하는 언어, 구조를 밝히는 기술, 정의를 작동시키는 역량을 다룹니다.</p>
+      </div>
+      <div class="area-item">
+        <h3>연구</h3>
+        <p>문제정의 실패의 유형과 구조를 연구합니다. 의사결정자의 절반이 잘못된 문제를 풀고 있다는 사실은 알려져 있지만, 왜 그런지를 체계적으로 다루는 곳은 많지 않습니다.</p>
+      </div>
+      <div class="area-item">
+        <h3>훈련</h3>
+        <p>개인과 조직이 문제정의를 반복 가능한 역량으로 갖추도록 돕습니다. 문제지능은 타고나는 것이 아니라 훈련 가능합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Approach -->
+  <section>
+    <h2>접근</h2>
+    <p style="margin-bottom: 2rem;">문제정의연구소는 네 단계의 프레임워크로 문제정의를 다룹니다.</p>
+    <div class="stages">
+      <div class="stage">
+        <div class="label">01</div>
+        <h3>Awareness</h3>
+        <p>나는 뭘 못 보고 있는가</p>
+      </div>
+      <div class="stage">
+        <div class="label">02</div>
+        <h3>Literacy</h3>
+        <p>문제를 어떻게 구분하는가</p>
+      </div>
+      <div class="stage">
+        <div class="label">03</div>
+        <h3>Definition</h3>
+        <p>이 문제의 구조는 무엇인가</p>
+      </div>
+      <div class="stage">
+        <div class="label">04</div>
+        <h3>Engagement</h3>
+        <p>이 정의를 어떻게 작동시키는가</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Writing -->
+  <section>
+    <h2>글</h2>
+    <ul class="writing-list">
+      <li>
+        <span class="title">준비 중입니다.</span>
+        <span class="meta">브런치 · 뉴스레터</span>
+      </li>
+    </ul>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Footer -->
+  <footer>
+    <p>문제정의연구소</p>
+    <div class="links">
+      <a href="mailto:j@benefit.is">j@benefit.is</a>
+    </div>
+    <p style="margin-top: 2rem; font-size: 0.7rem; color: #ccc;">&copy; 2026 문제정의연구소</p>
+  </footer>
+
+</body>
+</html>
