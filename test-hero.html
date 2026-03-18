@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Variants</title>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Playfair+Display:wght@400;700&family=EB+Garamond:wght@400;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Pretendard', sans-serif; background: #222; color: #ccc; }
+    .label { text-align: center; padding: 2rem 0 0.5rem; font-size: 0.7rem; letter-spacing: 0.2em; color: #666; text-transform: uppercase; }
+    hr { border: none; border-top: 1px solid #333; max-width: 800px; margin: 0 auto; }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5rem 2rem;
+      background: #111;
+    }
+
+    .hero img { width: 130px; height: auto; }
+
+    .hero h1 {
+      font-weight: 700;
+      color: #f0ece6;
+      line-height: 1.2;
+    }
+
+    .hero .sub {
+      color: #888;
+      font-size: 0.85rem;
+      margin-top: 0.8rem;
+    }
+
+    .hero .acts {
+      color: #555;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      margin-top: 0.4rem;
+    }
+
+    /* ── A: 가로 배치, 세리프, 큰 글씨 ── */
+    .v-a { gap: 3rem; }
+    .v-a h1 { font-family: 'Nanum Myeongjo', serif; font-size: 2.2rem; }
+
+    /* ── B: 가로 배치, Playfair, Problem / of Problems / Lab ── */
+    .v-b { gap: 3rem; }
+    .v-b h1 { font-family: 'Playfair Display', serif; font-size: 2.4rem; letter-spacing: -0.01em; }
+
+    /* ── C: 가로 배치, EB Garamond, 이탤릭 of ── */
+    .v-c { gap: 3rem; }
+    .v-c h1 { font-family: 'EB Garamond', serif; font-size: 2.6rem; }
+    .v-c h1 em { font-style: italic; font-weight: 400; }
+
+    /* ── D: 세로 중앙, 로고 위 텍스트 아래 ── */
+    .v-d { flex-direction: column; gap: 2rem; text-align: center; }
+    .v-d h1 { font-family: 'Nanum Myeongjo', serif; font-size: 1.8rem; }
+
+    /* ── E: 가로, 작은 텍스트 + 한글 강조 ── */
+    .v-e { gap: 3rem; }
+    .v-e .hero-text { display: flex; flex-direction: column; }
+    .v-e h1 { font-family: 'Nanum Myeongjo', serif; font-size: 1.6rem; color: #f0ece6; }
+    .v-e .kr { font-family: 'Nanum Myeongjo', serif; font-size: 1.1rem; color: #999; margin-top: 0.3rem; letter-spacing: 0.08em; }
+
+    /* ── F: 가로, 한글 메인 + 영어 서브 ── */
+    .v-f { gap: 3rem; }
+    .v-f h1 { font-family: 'Nanum Myeongjo', serif; font-size: 2.2rem; color: #f0ece6; }
+    .v-f .en { font-family: 'EB Garamond', serif; font-size: 0.9rem; color: #777; margin-top: 0.5rem; letter-spacing: 0.05em; }
+  </style>
+</head>
+<body>
+
+<p class="label">A — Nanum Myeongjo, 가로</p>
+<div class="hero v-a">
+  <img src="logo-white.png" alt="">
+  <div class="hero-text">
+    <h1>Problem<br>of Problems<br>Lab</h1>
+    <p class="sub">문제를 정의하는 방법을 연구합니다.</p>
+    <p class="acts">교육 · 연구 · 훈련</p>
+  </div>
+</div>
+
+<hr>
+<p class="label">B — Playfair Display, 가로</p>
+<div class="hero v-b">
+  <img src="logo-white.png" alt="">
+  <div class="hero-text">
+    <h1>Problem<br>of Problems<br>Lab</h1>
+    <p class="sub">문제를 정의하는 방법을 연구합니다.</p>
+    <p class="acts">교육 · 연구 · 훈련</p>
+  </div>
+</div>
+
+<hr>
+<p class="label">C — EB Garamond, 이탤릭 of</p>
+<div class="hero v-c">
+  <img src="logo-white.png" alt="">
+  <div class="hero-text">
+    <h1>Problem<br><em>of</em> Problems<br>Lab</h1>
+    <p class="sub">문제를 정의하는 방법을 연구합니다.</p>
+    <p class="acts">교육 · 연구 · 훈련</p>
+  </div>
+</div>
+
+<hr>
+<p class="label">D — 세로 중앙, 로고 위</p>
+<div class="hero v-d">
+  <img src="logo-white.png" alt="">
+  <div class="hero-text">
+    <h1>Problem<br>of Problems<br>Lab</h1>
+    <p class="sub">문제를 정의하는 방법을 연구합니다.</p>
+    <p class="acts">교육 · 연구 · 훈련</p>
+  </div>
+</div>
+
+<hr>
+<p class="label">E — 영어 메인 + 한글 서브</p>
+<div class="hero v-e">
+  <img src="logo-white.png" alt="">
+  <div class="hero-text">
+    <h1>Problem<br>of Problems<br>Lab</h1>
+    <p class="kr">문제정의연구소</p>
+    <p class="sub">문제를 정의하는 방법을 연구합니다.</p>
+    <p class="acts">교육 · 연구 · 훈련</p>
+  </div>
+</div>
+
+<hr>
+<p class="label">F — 한글 메인 + 영어 서브</p>
+<div class="hero v-f">
+  <img src="logo-white.png" alt="">
+  <div class="hero-text">
+    <h1>문제정의<br>연구소</h1>
+    <p class="en">Problem of Problems Lab</p>
+    <p class="sub">문제를 정의하는 방법을 연구합니다.</p>
+    <p class="acts">교육 · 연구 · 훈련</p>
+  </div>
+</div>
+
+</body>
+</html>

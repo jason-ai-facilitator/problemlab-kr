@@ -25,31 +25,41 @@
     .hero {
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
+      gap: 3rem;
       padding: 4rem 2rem;
+      background: #111;
+      color: #f0ece6;
     }
 
-    .logo { width: 120px; height: auto; margin-bottom: 2rem; }
+    .logo { width: 140px; height: auto; }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
 
     .hero h1 {
       font-family: 'Nanum Myeongjo', serif;
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 700;
-      letter-spacing: 0.06em;
-      margin-bottom: 1.2rem;
+      letter-spacing: 0.04em;
+      line-height: 1.3;
+      color: #f0ece6;
     }
 
     .hero .tagline {
-      color: #555;
-      font-size: 1rem;
-      margin-bottom: 0.6rem;
+      color: #999;
+      font-size: 0.95rem;
+      margin-top: 0.4rem;
     }
 
     .hero .activities {
-      color: #999;
-      font-size: 0.85rem;
+      color: #666;
+      font-size: 0.8rem;
       letter-spacing: 0.15em;
     }
 
@@ -207,8 +217,9 @@
 
     /* ── Mobile ── */
     @media (max-width: 480px) {
-      .logo { width: 90px; }
-      .hero h1 { font-size: 1.4rem; }
+      .hero { flex-direction: column; gap: 2rem; text-align: center; }
+      .logo { width: 100px; }
+      .hero h1 { font-size: 1.5rem; }
       .stages { grid-template-columns: 1fr; }
       section { padding: 3.5rem 1.5rem; }
     }
@@ -218,10 +229,12 @@
 
   <!-- Hero -->
   <header class="hero">
-    <img src="logo.png" alt="문제정의연구소" class="logo">
-    <h1>문제정의연구소</h1>
-    <p class="tagline">문제를 정의하는 방법을 연구합니다.</p>
-    <p class="activities">교육 · 연구 · 훈련</p>
+    <img src="logo-white.png" alt="문제정의연구소" class="logo">
+    <div class="hero-text">
+      <h1>Problem<br>of Problems<br>Lab</h1>
+      <p class="tagline">문제를 정의하는 방법을 연구합니다.</p>
+      <p class="activities">교육 · 연구 · 훈련</p>
+    </div>
   </header>
 
   <hr class="divider">
